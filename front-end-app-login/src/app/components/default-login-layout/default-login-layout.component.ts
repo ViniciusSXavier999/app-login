@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-default-login-layout',
@@ -9,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./default-login-layout.component.css']
 })
 export class DefaultLoginLayoutComponent {
-
+  // Recebendo através de input
+  @Input() title: string = "";
+  @Input() primaryBtnText: string = "";
+  @Input() secondaryBtnText: string = "";
 }
