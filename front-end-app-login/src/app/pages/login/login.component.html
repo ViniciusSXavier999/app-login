@@ -6,6 +6,25 @@
 
  <!--CRIANDO O FORMULARIO DE LOGIN-->
     <form [formGroup]="loginForm">
-        
+        <app-primary-input 
+        formControlName="email"
+        inputName="email"
+        type="email"
+        label="Email"
+        placeholder="123@gmail.com"
+        >
+            <img src="/assets/svg/icon-email.svg" >
+        </app-primary-input>
+
+        <!--SEGUNDO INPUT-->
+        <app-primary-input 
+        formControlName="password"
+        inputName="password"
+        type="password"
+        label="Your Password"
+        >
+            <img src="/assets/svg/icon-password.svg" >
+        </app-primary-input>
+
     </form>
 </app-default-login-layout>

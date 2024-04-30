@@ -8,7 +8,7 @@ import { PrimaryInputComponent } from './components/primary-input/primary-input.
 @NgModule({
   declarations: [
     AppComponent,
-    PrimaryInputComponent,
+    
   ],
   imports: [
     BrowserModule,
