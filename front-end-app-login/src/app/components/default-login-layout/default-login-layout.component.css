@@ -27,7 +27,7 @@ main {
         flex-grow: 0.3;
         padding: 0 35px;
 
-        img {
+        .img {
             margin-bottom: 30px;
         }
         
@@ -76,6 +76,10 @@ main {
                 background: transparent;
                 padding: 12px 24px;
                 cursor: pointer;
+
+                &:disabled {
+                    opacity: 0.8;
+                }
     
     
                 &.btn-primary {
