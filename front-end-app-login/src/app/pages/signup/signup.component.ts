@@ -7,13 +7,15 @@ import { DefaultLoginLayoutComponent } from 'src/app/components/default-login-la
 import { PrimaryInputComponent } from 'src/app/components/primary-input/primary-input.component';
 import { LoginService } from 'src/app/services/login.service';
 
-interface LoginForm {
+interface SignupForm {
+  name: FormControl,
   email: FormControl,
-  password: FormControl
+  password: FormControl,
+  passwordConfirm: FormControl
 }
 
 @Component({
-  selector: 'app-login',
+  selector: 'app-signup',
   standalone: true,
   imports:[CommonModule ,DefaultLoginLayoutComponent,
     ReactiveFormsModule, PrimaryInputComponent
@@ -21,33 +23,35 @@ interface LoginForm {
   providers: [
     LoginService
   ],
-  templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  templateUrl: './signup.component.html',
+  styleUrls: ['./signup.component.css']
 })
-export class LoginComponent {
+export class SignupComponent {
 
-  loginForm!: FormGroup<LoginForm>;
+  signupForm!: FormGroup<SignupForm>;
 
   constructor(
     private router: Router,
     private loginService: LoginService,
     private toastService: ToastrService
   ){
-    this.loginForm = new FormGroup({
+    this.signupForm = new FormGroup({
       // campos que vão ter dentro do meu formulario
+      name: new FormControl('', [Validators.required,Validators.minLength(3)]),
       email: new FormControl('', [Validators.required, Validators.email]),
-      password: new FormControl('', [Validators.required, Validators.minLength(6)])
+      password: new FormControl('', [Validators.required, Validators.minLength(6)]),
+      passwordConfirm: new FormControl('', [Validators.required, Validators.minLength(6)])
     })
   }
 
   submit() {
-    this.loginService.login(this.loginForm.value.email, this.loginForm.value.password).subscribe({
+    this.loginService.login(this.signupForm.value.email, this.signupForm.value.password).subscribe({
       next: () => this.toastService.success("Login feito"),
       error: () => this.toastService.error("Erro inesperado! Tente novamente mais tarde")
     })
   }
 
   navigate() {
-    this.router.navigate(["signup"])
+    this.router.navigate(["login"])
   }
 }
