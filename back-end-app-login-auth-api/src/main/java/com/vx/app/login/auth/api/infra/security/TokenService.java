@@ -65,6 +65,7 @@ public class TokenService {
                     * quando estamos gerando o token no withSubject*/
                     .getSubject();
 
+                    // caso dê algum erro eu vou retornar essa exceção e retornar null
         } catch (JWTVerificationException exception) {
             return null;
         }
