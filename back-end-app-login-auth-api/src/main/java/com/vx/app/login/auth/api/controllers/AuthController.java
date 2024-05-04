@@ -36,7 +36,7 @@ public class AuthController {
                 .orElseThrow(() -> new RuntimeException("User not found"));
 
         // vou verificar se a senha do usuário é igual a que eu recebi por parametro
-        if(passwordEncoder.matches(user.getPassword(), login.password())) {
+        if(passwordEncoder.matches(login.password(), user.getPassword())) {
             // se forem iguais eu vou criar um token
             String token = this.tokenService.generateToken(user);
             return ResponseEntity.ok(new ResponseDTO(user.getName(), token));
