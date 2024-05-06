@@ -15,3 +15,24 @@ Projeto app-login, o objetivo principal do projeto é desenvolver as habilidades
   <img align="center" alt="js" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" />
   <img align="center" alt="js" height="60" width="60" src= "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" /> 
 </div>
+
+<div></div>
+
+### PáGINA DE LOGIN 🔅
+
+<img  width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/app-login/page-login.png" />
+
+
+### PáGINA DE CADASTRO 🔅
+
+<img  width="700" src = "https://github.com/ViniciusSXavier999/Assets/blob/main/app-login/page-signup.png" />
+
+### End Points
+A API tem os seguintes End Points:
+| Tipo        | url                        | Funcionalidade                                               |
+| ------------ | ------------------------- | -------------------------------------------------------------|
+| ```post```   | "/auth/register"          | Realiza um novo cadastro de usuário                          |
+| ```post```   | "/auth/login"             | Para logar na aplicação                                      |
+| ```get```    | "/user"                   | Página protegida que somente usuários logados podem acessar  |
+
+
