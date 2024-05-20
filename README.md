@@ -4,7 +4,7 @@
 
 Projeto app-login, o objetivo principal do projeto é desenvolver as habilidades de integração front-end e back-end para aperfeiçoar a minha stack de Desenvolvedor full stack.
 
-### TECNOLOGIAS UTILIZADAS  💻
+### TECNOLOGIAS UTILIZADAS 🧠
 
 <div align = "left">
 <img align="center" alt="js" height="60" width="60" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" />
@@ -17,6 +17,21 @@ Projeto app-login, o objetivo principal do projeto é desenvolver as habilidades
 </div>
 
 <div></div>
+
+### PRÉ REQUISITOS 💻
+- É necessário ter o java instalado na máquina (recomendo o download do [JDK](https://www.oracle.com/java/technologies/downloads/) que é o kit de desenvolvimento Java com tudo que você necessita.)
+- [NodeJS](https://github.com/)
+- [Git 2](https://github.com)
+- [Angular CLI](https://angular.io/cli)
+- IDE (sua preferência)
+
+### CLONE 💫
+
+Como clonar seu projeto
+
+```bash
+git clone https://github.com/ViniciusSXavier999/app-login.git
+```
 
 ### PáGINA DE LOGIN 🔅
 
